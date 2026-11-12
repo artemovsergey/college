@@ -1,0 +1,13 @@
+# Служебные файлы Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.lnk
+
+# Блокировки и временные файлы Office
+~$*
+*.tmp
+
+# Мусор редакторов и архивов
+.DS_Store
+*.bak
