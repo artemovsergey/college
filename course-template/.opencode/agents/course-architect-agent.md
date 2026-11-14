@@ -51,10 +51,14 @@ permissions:
 
 | Состояние | Скилл |
 |-----------|-------|
-| Нет репозитория или `course.yaml` | `init-course-repository` |
-| Есть `course.yaml`, нет `syllabus/rp.yml` | `create-rp` |
-| Есть `syllabus/rp.yml`, нет `syllabus/ktp.yml` | `create-ktp` |
-| Есть РП и КТП | остановиться: начальный контур закрыт |
+| Нет репозитория или `course.yaml` не заполнен | `init-course-repository` |
+| `course.yaml` заполнен, `syllabus/rp.yml` пуст | `create-rp` |
+| `rp.yml` заполнен, `syllabus/ktp.yml` пуст | `create-ktp` |
+| `rp.yml` и `ktp.yml` заполнены | остановиться: начальный контур закрыт |
+
+Пустой файл-заготовка с `schema: 1` и комментариями считается отсутствующим.
+`rp.yml` заполнена, если в ней есть `course`, `hours`, `sections` и хотя бы одна
+секция. `ktp.yml` заполнен, если в нём есть `sections` и занятия.
 
 Не перескакивай этапы. Не начинай КТП, пока РП не принята. Не начинай РП, пока
 нет нормативной папки и шаблона.

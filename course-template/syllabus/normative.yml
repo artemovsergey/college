@@ -1,13 +1,51 @@
 schema: 1
+documents:
+  - id: fgos-09.02.07
+    title: ФГОС СПО по специальности 09.02.07 «Информационные системы и программирование»
+    number: "1547"
+    date: "2016-12-09"
+    source: "Минобрнауки России"
+    file: fgos-09.02.07-1547.txt
+    original: fgos-09.02.07-1547.html
+    status: official
+    used_for: [rp, ktp]
 
-# Нормативная база курса. Заполняется скиллом create-rp.
-# Каждый документ:
-#   id: короткий идентификатор
-#   title: полное название
-#   number: номер и дата приказа/документа
-#   date: дата ввода в действие
-#   source: URL или путь к файлу
-#   file: локальная копия в syllabus/normative/
-#   status: official | local | methodical | draft
-#   used_for: что взято (часы, компетенции, требования)
-documents: []
+  - id: profstandard-06.011
+    title: Профессиональный стандарт «Администратор баз данных»
+    number: "408н"
+    date: "2023-04-27"
+    source: "Минтруд России"
+    file: profstandard-06.011-408n.txt
+    original: profstandard-06.011-408n.docx
+    status: official
+    used_for: [rp]
+
+  - id: polozhenie-umk
+    title: Положение об УМК учебной дисциплины (профессионального модуля)
+    number: ""
+    date: ""
+    source: "ГБПОУ СКС"
+    file: polozhenie-umk.txt
+    original: polozhenie-umk.docx
+    status: local
+    used_for: [rp, ktp]
+
+  - id: metodrekomendacii-ktp
+    title: Методические рекомендации по разработке календарно-тематического плана
+    number: ""
+    date: ""
+    source: "ГБПОУ СКС"
+    file: metodrekomendacii-ktp.txt
+    original: metodrekomendacii-ktp.docx
+    status: local
+    used_for: [ktp]
+
+  - id: polozhenie-lr-pr
+    title: Положение о лабораторных и практических работах
+    number: ""
+    date: ""
+    source: "ГБПОУ СКС"
+    file: polozhenie-lr-pr.txt
+    original: polozhenie-lr-pr.docx
+    status: local
+    used_for: [rp, ktp]
