@@ -1,0 +1,4 @@
+schema: 1
+
+# Рабочая программа. Заполняется скиллом create-rp.
+# Структура: course, hours, passport, outcomes, sections, conditions, control.

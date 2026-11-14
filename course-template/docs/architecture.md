@@ -32,7 +32,7 @@
 ## 3. Этапы
 
 ```text
-0. init-course-repository   → репозиторий, course.yaml, AGENTS.md, CI
+0. init-course-repository   → репозиторий, course.yaml, AGENTS.md, заготовка CI
 1. create-rp               → syllabus/rp.md, rp.yml, rp.docx
 2. create-ktp              → syllabus/ktp.md, ktp.yml, ktp.docx
 3. build-course-plan       → plan.yml, заготовки занятий
@@ -47,7 +47,7 @@
 ### Этап 0. Репозиторий
 
 `init-course-repository` создаёт репозиторий из шаблона: структуру каталогов,
-`course.yaml`, `AGENTS.md`, пустые `syllabus/` и `course/`, CI. Заполняются
+`course.yaml`, `AGENTS.md`, пустые `syllabus/` и `course/`, заготовка CI. Заполняются
 код специальности, модуль, группа, курс, семестр, преподаватель и стек.
 
 ### Этап 1. Рабочая программа

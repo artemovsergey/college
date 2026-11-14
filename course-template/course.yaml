@@ -2,10 +2,21 @@ course:
   code: "МДК 00.00"
   title: "Название предмета"
   specialty: "09.02.07"
+  qualification: "Квалификация"
+  module: "ПМ.00 Название модуля"
   group: "ГРУППА"
   year: "2026/2027"
+  study_year: 3
+  semester: 5
   teacher: "Фамилия И.О."
   repo_slug: "mdk0000"
+  stack: []
+
+hours:
+  total: 0
+  theory: 0
+  practice: 0
+  selfstudy: 0
 
 build:
   docx: true

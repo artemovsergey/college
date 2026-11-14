@@ -7,7 +7,7 @@
 
 ## 1. Что является источником правды
 
-- `course.yaml` — метаданные, часы, компетенции, стек.
+- `course.yaml` — метаданные, часы, стек.
 - `syllabus/rp.yml` — рабочая программа в структурированном виде.
 - `syllabus/ktp.yml` — календарно-тематический план.
 - `course/**/*.md` — содержание занятий; у каждого файла есть frontmatter.
@@ -57,7 +57,7 @@ course-<slug>/
 
 | Роль | Агент | Скилл | Результат |
 |------|-------|-------|-----------|
-| Архитектор курса | `course-architect-agent` | `init-course-repository` | репозиторий, `course.yaml`, `AGENTS.md`, CI |
+| Архитектор курса | `course-architect-agent` | `init-course-repository` | репозиторий, `course.yaml`, `AGENTS.md`, заготовка CI |
 | Архитектор курса | `course-architect-agent` | `create-rp` | `syllabus/rp.*`, `normative.yml`, `outcomes.yml` |
 | Архитектор курса | `course-architect-agent` | `create-ktp` | `syllabus/ktp.*`, заготовки занятий |
 | Планировщик | `course-planner-agent` | `build-course-plan` | `plan.yml` |
@@ -67,14 +67,15 @@ course-<slug>/
 | Оформитель | `formatter-agent` | `assemble-methodichka` | `dist/docs/*.docx`, `*.pdf` |
 | Методист | `methodist-agent` | — | отчёт по рубрике, без правки файлов |
 
-Скиллы и агенты создаются постепенно. Пока роль не реализована, её результат
-делается вручную и проверяется по тому же контракту.
+Начальный контур реализован: `course-architect-agent`, `methodist-agent`,
+`init-course-repository`, `create-rp`, `create-ktp`. Остальные роли появятся
+вместе со скиллами материалов и проверяются по тому же контракту.
 
 ## 4. Ворота
 
 | Этап | Кто проверяет | Критерий |
 |------|---------------|----------|
-| Репозиторий | `course-architect-agent` | структура на месте, `course.yaml` заполнен, CI зелёный, секретов нет |
+| Репозиторий | `course-architect-agent` | структура на месте, `course.yaml` заполнен, секретов нет |
 | РП | `methodist-agent`, рубрика «РП/КТП» | часы сходятся, компетенции покрыты, разделы шаблона на месте, нет `{{ }}` и `TODO` |
 | КТП | `methodist-agent`, рубрика «РП/КТП» | часы семестра сходятся, практика идёт после лекции-опоры, нет раздела без практики |
 | Материал | `methodist-agent`, рубрика «материал» | структура, факты, код, визуалы и вопросы соответствуют скиллу |

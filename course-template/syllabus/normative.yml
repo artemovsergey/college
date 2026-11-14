@@ -1,0 +1,13 @@
+schema: 1
+
+# Нормативная база курса. Заполняется скиллом create-rp.
+# Каждый документ:
+#   id: короткий идентификатор
+#   title: полное название
+#   number: номер и дата приказа/документа
+#   date: дата ввода в действие
+#   source: URL или путь к файлу
+#   file: локальная копия в syllabus/normative/
+#   status: official | local | methodical | draft
+#   used_for: что взято (часы, компетенции, требования)
+documents: []
