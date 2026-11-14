@@ -1,0 +1,55 @@
+# План курса — единственный источник правды для материалов.
+# Схема плана: plan schema 1.
+# Заполняется агентом course-planner-agent (скилл build-course-plan)
+# из syllabus/ktp.yml. Руками не правится.
+#
+# Занятия:
+#   id            — стабильный идентификатор, префикс раздела + вид + номер,
+#                   например "1-l1" (лекция), "1-p2" (практика), "1-s1" (СР)
+#   kind          — lecture | practice | selfstudy | coursedesign | consultation | exam
+#   number        — номер внутри вида
+#   hours         — часы по КТП
+#   prerequisites — id занятий, которые должны быть пройдены раньше
+#   outcomes      — коды результатов из outcomes (ПК/ОК)
+#   sources       — ключи из syllabus/sources.yml
+#   file          — путь к материалу или null, если материала ещё нет
+#   planned       — true, если занятие есть в КТП, но материала ещё нет
+
+schema: 1
+
+course:
+  code: "МДК 00.00"
+  title: "Название предмета"
+  specialty: "09.02.07"
+  group: "ГРУППА"
+  year: "2026/2027"
+  teacher: "Фамилия И.О."
+
+hours:
+  total: 0
+  theory: 0
+  practice: 0
+  course_design: 0
+  selfstudy: 0
+
+outcomes:
+  - code: "ПК 1.1"
+    text: "Формулировка результата обучения"
+
+sections: []
+# Пример раздела:
+# sections:
+#   - number: 1
+#     title: "Основы"
+#     goal: "Что студент умеет после раздела"
+#     lessons:
+#       - id: "1-l1"
+#         kind: lecture
+#         number: 1
+#         title: "Введение"
+#         hours: 2
+#         prerequisites: []
+#         outcomes: ["ПК 1.1"]
+#         sources: ["mdn"]
+#         file: "course/chapter-01/lecture-01.md"
+#         planned: false

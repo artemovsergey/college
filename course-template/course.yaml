@@ -1,0 +1,15 @@
+course:
+  code: "МДК 00.00"
+  title: "Название предмета"
+  specialty: "09.02.07"
+  group: "ГРУППА"
+  year: "2026/2027"
+  teacher: "Фамилия И.О."
+  repo_slug: "mdk0000"
+
+build:
+  docx: true
+  pdf: true
+  pptx: true
+  figures: true
+  book: false

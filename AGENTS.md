@@ -24,3 +24,10 @@
 ## Учебная практика УП09
 
 - https://github.com/artemovsergey/UP09
+
+
+## Пайплайн учебных курсов
+
+- шаблон репозитория предмета — `course-template/`
+- архитектура — `course-template/docs/architecture.md`
+- правила для агентов — `course-template/AGENTS.md`

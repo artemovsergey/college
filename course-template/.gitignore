@@ -1,0 +1,14 @@
+promt.md
+/tests/
+.venv/
+build/
+dist/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+solutions/**/bin/
+solutions/**/obj/
+projects/**/bin/
+projects/**/obj/
+node_modules/
