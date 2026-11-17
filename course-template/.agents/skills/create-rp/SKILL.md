@@ -94,7 +94,7 @@ course:
   title: "Разработка модулей программного обеспечения"
   specialty: "09.02.07"
   qualification: "администратор баз данных"
-  group: "ИП-243"
+  group: "ИБ-243"
   year: "2026/2027"
   study_year: 3
   semester: 5

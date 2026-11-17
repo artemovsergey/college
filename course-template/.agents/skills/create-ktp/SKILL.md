@@ -71,7 +71,7 @@ course:
   code: "МДК 01.03"
   title: "Разработка мобильных приложений"
   specialty: "09.02.07"
-  group: "ИП-243"
+  group: "ИБ-243"
   year: "2026/2027"
   study_year: 3
   semester: 5
@@ -132,7 +132,7 @@ prerequisites: []
 outcomes: ["ПК 1.1", "ОК 01"]
 sources: []
 file: "course/chapter-01/lecture-01.md"
-slides: "course/chapter-01/presentation-01.md"
+presentation: "course/chapter-01/presentation-01.md"
 planned: true
 ---
 ```

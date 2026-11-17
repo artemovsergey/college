@@ -415,7 +415,7 @@ def split_sections(md_path):
                     tt = clean_md(mm.group(1))
                     if 3 < len(tt) < 60 and tt not in terms:
                         terms.append(tt)
-        data["summary"] = terms[:10] if terms else ["Основные понятия лекции см. в слайдах выше."]
+        data["summary"] = terms[:10] if terms else ["Основные понятия лекции см. в презентацияах выше."]
 
     return data
 
@@ -480,7 +480,7 @@ def build_lecture_pptx(data, out_path):
     para(tf, f"Лекция {num}", size=40, color=RGBColor(0x9F, 0xC5, 0xE6), bold=True, first=True, space_after=2)
     para(tf, title, size=30, color=WHITE, bold=True, space_after=0)
     _, tf = add_text(s, Inches(0.9), Inches(6.35), Inches(11.5), Inches(0.8), anchor=MSO_ANCHOR.TOP)
-    para(tf, "Каждый слайд содержит выделенный блок \u201cЧТО ЗАКОНСПЕКТИРОВАТЬ\u201d "
+    para(tf, "Каждый презентация содержит выделенный блок \u201cЧТО ЗАКОНСПЕКТИРОВАТЬ\u201d "
              "\u2014 определения и ключевые термины, которые студенты записывают в конспект.",
          size=13, color=RGBColor(0xD8, 0xE4, 0xF0), first=True, space_after=0, line=1.1)
 
@@ -514,7 +514,7 @@ def build_lecture_pptx(data, out_path):
         header_band(s, f"Раздел лекции {num}", sub["title"])
         _, tf = add_text(s, Inches(0.55), Inches(1.6), Inches(12.25), Inches(3.3), anchor=MSO_ANCHOR.TOP)
         para(tf, sub["title"], size=20, color=ACCENT, bold=True, first=True, space_after=8, line=1.1)
-        para(tf, "Ниже \u2014 разбор по пунктам с примерами кода. Каждый слайд содержит блок конспекта.",
+        para(tf, "Ниже \u2014 разбор по пунктам с примерами кода. Каждый презентация содержит блок конспекта.",
              size=14, color=MUTED, space_after=0, line=1.1)
         conspect_box(s, [f"{sub['title']} \u2014 ключевая тема раздела."], y=Inches(5.35), h=Inches(1.6))
 
@@ -565,7 +565,7 @@ def build_lecture_pptx(data, out_path):
     header_band(s, "Резюме", "Что запомнить с лекции")
     conspect_items = [clean_md(x) for x in data["summary"]]
     if not conspect_items:
-        conspect_items = ["Основные определения лекции см. в блоках \u201cЧТО ЗАКОНСПЕКТИРОВАТЬ\u201d на слайдах выше."]
+        conspect_items = ["Основные определения лекции см. в блоках \u201cЧТО ЗАКОНСПЕКТИРОВАТЬ\u201d на презентацияах выше."]
     _, tf = add_text(s, Inches(0.55), Inches(1.55), Inches(12.25), Inches(3.5), anchor=MSO_ANCHOR.TOP)
     bullets(tf, conspect_items, size=16, first=True, space_after=6, line=1.08, bold_lead=True)
     conspect_box(s, conspect_items[:7], y=Inches(5.35), h=Inches(1.6))

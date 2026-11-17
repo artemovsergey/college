@@ -63,7 +63,7 @@ course-<slug>/
 | Планировщик | `course-planner-agent` | `build-course-plan` | `plan.yml` |
 | Лектор | `lecturer-agent` | `write-lecture` | `lecture-NN.md` |
 | Практик | `practitioner-agent` | `create-practice` | `practice-NN.md`, `selfwork-NN.md` |
-| Презентатор | `presenter-agent` | `build-slides` | `presentation-NN.md` |
+| Презентатор | `presenter-agent` | `build-presentation` | `presentation-NN.md` |
 | Оформитель | `formatter-agent` | `assemble-methodichka` | `dist/docs/*.docx`, `*.pdf` |
 | Методист | `methodist-agent` | — | отчёт по рубрике, без правки файлов |
 

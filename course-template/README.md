@@ -20,7 +20,7 @@
 6. **Собрать план.** Скилл `build-course-plan` (агент `course-planner-agent`)
    делает `plan.yml` из КТП и frontmatter. Руками `plan.yml` не правится.
 7. **Писать материалы** по скиллам `write-lecture`, `create-practice`,
-   `build-slides`. Каждый материал проходит методиста.
+   `build-presentation`. Каждый материал проходит методиста.
 8. **Собрать методичку** скиллом `assemble-methodichka` (агент
    `formatter-agent`) в `dist/docs/`.
 
