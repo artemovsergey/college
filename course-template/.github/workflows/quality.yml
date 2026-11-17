@@ -1,0 +1,60 @@
+name: quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python deps
+        run: pip install pyyaml python-pptx python-docx
+      - name: Check plan and course structure
+        run: |
+          if python - <<'PY'
+          import sys, yaml
+          from pathlib import Path
+          p = Path("plan.yml")
+          if not p.exists():
+              sys.exit(1)
+          data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+          sys.exit(0 if data.get("sections") else 1)
+          PY
+          then
+            python scripts/pipeline.py check
+            python scripts/pipeline.py status
+          else
+            echo "plan.yml пуст — проверка курса пропущена"
+          fi
+
+  practice-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test reference solutions
+        run: |
+          if [ -f solutions/practice-01/package.json ]; then
+            cd solutions/practice-01
+            npm install
+            npm test
+            npm run typecheck
+          else
+            echo "Эталонов практик нет — пропущено"
+          fi
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --accept 200,206,429 './**/*.md'
+          fail: true
