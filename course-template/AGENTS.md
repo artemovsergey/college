@@ -64,7 +64,7 @@ course-<slug>/
 | Лектор | `lecturer-agent` | `write-lecture` | `lecture-NN.md` |
 | Практик | `practitioner-agent` | `create-practice` | `practice-NN.md`, `selfwork-NN.md` |
 | Презентатор | `presenter-agent` | `build-presentation` | `presentation-NN.md` |
-| Оформитель | `formatter-agent` | `assemble-methodichka` | `dist/docs/*.docx`, `*.pdf` |
+| Сборщик УМК | `umk-agent` | `assemble-umk` | `dist/umk/*.docx`, `*.pdf` |
 | Методист | `methodist-agent` | — | отчёт по рубрике, без правки файлов |
 
 Начальный контур реализован: `course-architect-agent`, `methodist-agent`,
@@ -79,7 +79,7 @@ course-<slug>/
 | РП | `methodist-agent`, рубрика «РП/КТП» | часы сходятся, компетенции покрыты, разделы шаблона на месте, нет `{{ }}` и `TODO` |
 | КТП | `methodist-agent`, рубрика «РП/КТП» | часы семестра сходятся, практика идёт после лекции-опоры, нет раздела без практики |
 | Материал | `methodist-agent`, рубрика «материал» | структура, факты, код, визуалы и вопросы соответствуют скиллу |
-| Методичка | `methodist-agent`, рубрика «оформление» | титул, содержание, приложения и источники на месте; сборка без ошибок |
+| УМК | `methodist-agent`, рубрика «оформление» | титул, содержание, приложения и источники на месте; сборка без ошибок |
 
 После методиста результат смотрит преподаватель. Без его решения нельзя менять
 часы, номера и состав занятий.

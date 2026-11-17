@@ -21,8 +21,8 @@
    делает `plan.yml` из КТП и frontmatter. Руками `plan.yml` не правится.
 7. **Писать материалы** по скиллам `write-lecture`, `create-practice`,
    `build-presentation`. Каждый материал проходит методиста.
-8. **Собрать методичку** скиллом `assemble-methodichka` (агент
-   `formatter-agent`) в `dist/docs/`.
+8. **Собрать УМК** скиллом `assemble-umk` (агент
+   `umk-agent`) в `dist/umk/`.
 
 Скиллы начального контура лежат в `.agents/skills/`; шаги 7–8 пока
 выполняются вручную по контракту из `AGENTS.md` и `docs/architecture.md`.
